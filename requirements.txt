@@ -1,0 +1,6 @@
+ipykernel
+imgkit
+Pillow
+numpy
+pandas
+matplotlib
