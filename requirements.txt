@@ -4,3 +4,5 @@ Pillow
 numpy
 pandas
 matplotlib
+mkdocs-material
+mkdocs-macros-plugin
