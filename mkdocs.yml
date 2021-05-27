@@ -1,9 +1,16 @@
 site_name: Python Calender
+theme:
+    name: material
 extra_javascript:
-    - javascripts/config.js
+    - docs/javascripts/config.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 plugins:
     - search
     - macros:
         include_dir: docs/snippets
+    - git-revision-date-localized:
+        type: iso_datetime
+        timezone: Asia/Tokyo
+        locale: ja
+        enable_creation_date: true
