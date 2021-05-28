@@ -1,16 +1,30 @@
 site_name: Python Calender
 theme:
     name: material
+    prev_next_buttons_location: none
+    custom_dir: docs/custom
 extra_javascript:
-    - docs/javascripts/config.js
+    - javascripts/config.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+markdown_extensions:
+    - meta
+    - admonition
+    - fontawesome_markdown
 plugins:
     - search
-    - macros:
-        include_dir: docs/snippets
+    - git-authors:
+        show_contribution: true
+        show_line_count: true
+        count_empty_lines: true
     - git-revision-date-localized:
-        type: iso_datetime
+        type: datetime
         timezone: Asia/Tokyo
         locale: ja
         enable_creation_date: true
+        exclude:
+            - index.md
+    - macros:
+        include_dir: snippets
