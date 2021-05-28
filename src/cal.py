@@ -73,7 +73,7 @@ def trim(image, offset):
 
 im = Image.open('buf/cal.png')
 im = trim(im, 10)
-im.save('out/cal.png')
+im.save('target/cal.png')
 im.close()
 
 # %%

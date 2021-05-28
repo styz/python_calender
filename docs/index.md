@@ -1,3 +1,2 @@
 # index
 
-{{ macros_info() }}

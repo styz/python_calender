@@ -24,6 +24,18 @@
             "label": "mkdocs-stop",
             "type": "shell",
             "command": "${command:workbench.action.terminal.kill}"
+        },
+        {
+            "label": "mkdocs-build",
+            "type": "shell",
+            "command": [
+                "mkdocs build",
+                "--clean"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

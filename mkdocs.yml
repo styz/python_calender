@@ -1,30 +1,56 @@
 site_name: Python Calender
+site_description: 'Python Development Container And Documentation Environment.'
+site_author: Yuji Sato
+site_url: http://xxxxx
+# Copyright
+copyright: 'Copyright (c) 2021 Yuji Sato'
+docs_dir: docs
+
+use_directory_urls: false
+
 theme:
-    name: material
-    prev_next_buttons_location: none
-    custom_dir: docs/custom
+  name: material
+  prev_next_buttons_location: none
+  custom_dir: docs_custom_theme
+  language: ja
+
+extra:
+  version: 0.0.1
+
 extra_javascript:
-    - javascripts/config.js
-    - https://polyfill.io/v3/polyfill.min.js?features=es6
-    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 extra_css:
-    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+  - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+
 markdown_extensions:
-    - meta
-    - admonition
-    - fontawesome_markdown
+  - meta
+  - admonition
+  - def_list
+  - fontawesome_markdown
+  - pymdownx.smartsymbols
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: '!!python/name:pymdownx.superfences.fence_code_format'
+
 plugins:
-    - search
-    - git-authors:
-        show_contribution: true
-        show_line_count: true
-        count_empty_lines: true
-    - git-revision-date-localized:
-        type: datetime
-        timezone: Asia/Tokyo
-        locale: ja
-        enable_creation_date: true
-        exclude:
-            - index.md
-    - macros:
-        include_dir: snippets
+  - search
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: true
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Tokyo
+      locale: ja
+      enable_creation_date: true
+      exclude:
+        - index.md
+  - macros:
+      include_dir: docs_snippets

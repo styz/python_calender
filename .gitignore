@@ -1,0 +1,7 @@
+.*
+!.gitignore
+!.devcontainer
+!.vscode
+site
+buf
+target
