@@ -3,6 +3,11 @@
 {% block content %}
   {{ super() }}
 
+  {% if "localsearch" in config["plugins"] %}
+  <script src="https://unpkg.com/iframe-worker/polyfill"></script>
+  <script src="{{ 'search/search_index.js' | url }}"></script>
+  {% endif %}
+
   {% if git_page_authors %}
     <div class="md-source-date">
       <small>

@@ -2,7 +2,6 @@ site_name: Python Calender
 site_description: 'Python Development Container And Documentation Environment.'
 site_author: Yuji Sato
 site_url: http://xxxxx
-# Copyright
 copyright: 'Copyright (c) 2021 Yuji Sato'
 docs_dir: docs
 
@@ -13,6 +12,8 @@ theme:
   prev_next_buttons_location: none
   custom_dir: docs_custom_theme
   language: ja
+  feature:
+    - tabs
 
 extra:
   version: 0.0.1
@@ -21,26 +22,34 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@8.10.1/dist/mermaid.min.js
 
 extra_css:
   - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+
 
 markdown_extensions:
   - meta
   - admonition
   - def_list
+  - toc:
+      permalink: "¶"
   - fontawesome_markdown
   - pymdownx.smartsymbols
   - pymdownx.details
   - pymdownx.tabbed
+  - pymdownx.highlight:
+      linenums: true
+      noclasses: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid-experimental
-          format: '!!python/name:pymdownx.superfences.fence_code_format'
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
 
 plugins:
   - search
+  - localsearch
   - git-authors:
       show_contribution: true
       show_line_count: true
