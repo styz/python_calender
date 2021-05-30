@@ -5,7 +5,8 @@ site_url: http://xxxxx
 copyright: 'Copyright (c) 2021 Yuji Sato'
 docs_dir: docs
 
-use_directory_urls: false
+# ローカルファイルでもページ内リンクが開けるようになる代わりに、ページ内リンクに.htmlを入れなければならない。
+# use_directory_urls: false
 
 theme:
   name: material
