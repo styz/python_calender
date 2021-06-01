@@ -13,8 +13,8 @@ theme:
   prev_next_buttons_location: none
   custom_dir: docs_custom_theme
   language: ja
-  feature:
-    - tabs
+  features:
+    - navigation.tabs
 
 extra:
   version: 0.0.1
@@ -24,6 +24,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid@8.10.1/dist/mermaid.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js
 
 extra_css:
   - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
@@ -33,15 +34,18 @@ markdown_extensions:
   - meta
   - admonition
   - def_list
+  - footnotes
   - toc:
       permalink: "¶"
   - fontawesome_markdown
+  - plantuml_markdown:
+      format: svg_inline
   - pymdownx.smartsymbols
   - pymdownx.details
   - pymdownx.tabbed
+  - pymdownx.keys
   - pymdownx.highlight:
       linenums: true
-      noclasses: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -64,3 +68,4 @@ plugins:
         - index.md
   - macros:
       include_dir: docs_snippets
+  - inline-svg

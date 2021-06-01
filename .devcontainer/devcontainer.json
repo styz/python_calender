@@ -10,9 +10,16 @@
 			"VARIANT": "3.8",
 			// Options
 			"INSTALL_NODE": "false",
-			"NODE_VERSION": "lts/*"
+			"NODE_VERSION": "lts/*",
+			// Proxy環境の場合
+			// "HTTP_PROXY": "http://hoge.com:port/",
+			// "HTTPS_PROXY": "https://hoge.com:port/"
 		}
 	},
+	// リモートDocker Hostへの接続の場合, リモートホスト状のディレクトリをコンテナにマウント
+	// see. https://code.visualstudio.com/docs/remote/containers-advanced#_developing-inside-a-container-on-a-remote-docker-host
+	// "workspaceFolder": "/workspace/calendar",
+	// "workspaceMount": "src={source path on remote host},dst=/workspace/calendar,type=bind",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
@@ -44,7 +51,8 @@
 		"shardulm94.trailing-spaces",
 		"oderwat.indent-rainbow",
 		"coenraads.bracket-pair-colorizer-2",
-		"msjsdiag.debugger-for-chrome"
+		"msjsdiag.debugger-for-chrome",
+		"joaompinto.vscode-graphviz"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
