@@ -4,11 +4,6 @@
 ARG VARIANT="3.9"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
-ARG HTTP_PROXY=""
-ARG HTTPS_PROXY=""
-ENV http_proxy "${HTTP_PROXY}"
-ENV https_proxy "${HTTPS_PROXY}"
-
 # [Option] Install Node.js
 ARG INSTALL_NODE="true"
 ARG NODE_VERSION="lts/*"
@@ -30,14 +25,14 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && locale-gen
 
 # install wkhtmltox
-RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \
+RUN wget -v https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \
     && apt -y install ./wkhtmltox_0.12.6-1.buster_amd64.deb \
     && rm -f ./wkhtmltox_0.12.6-1.buster_amd64.deb
 
 # install PlantUml
 COPY bin/plantuml /usr/local/bin/plantuml
 RUN mkdir /opt/plantuml \
-    && wget http://sourceforge.net/projects/plantuml/files/plantuml.1.2021.7.jar/download -O /opt/plantuml/plantuml.jar \
+    && wget -v http://sourceforge.net/projects/plantuml/files/plantuml.1.2021.7.jar/download -O /opt/plantuml/plantuml.jar \
     && chmod 755 /opt/plantuml/plantuml.jar \
     && chmod 755 /usr/local/bin/plantuml
 

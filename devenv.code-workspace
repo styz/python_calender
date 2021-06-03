@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"hediet.vscode-drawio.customLibraries": [
+			{
+				// Draw.ioエディタにImportするCustom Library.
+				// see. https://drawio-app.com/draw-io-training-exercise-9-create-your-own-custom-library/
+				"entryId": "graph template",
+				"file": "${workspaceFolder}/docs/documentation/graph/template.xml",
+				"libName": "template"
+			}
+		],
+	},
+	"extensions": {
+		"recommendations": [
+			// Remote-Containers
+			"ms-vscode-remote.remote-containers",
+			// for Docker
+			"ms-azuretools.vscode-docker",
+		]
+	},
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+	},
+}

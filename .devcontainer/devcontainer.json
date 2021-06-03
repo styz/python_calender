@@ -11,15 +11,13 @@
 			// Options
 			"INSTALL_NODE": "false",
 			"NODE_VERSION": "lts/*",
-			// Proxy環境の場合
-			// "HTTP_PROXY": "http://hoge.com:port/",
-			// "HTTPS_PROXY": "https://hoge.com:port/"
 		}
 	},
-	// リモートDocker Hostへの接続の場合, リモートホスト状のディレクトリをコンテナにマウント
+
+	// リモートDocker Hostへの接続の場合, リモートOS上のディレクトリをコンテナにマウント
 	// see. https://code.visualstudio.com/docs/remote/containers-advanced#_developing-inside-a-container-on-a-remote-docker-host
-	// "workspaceFolder": "/workspace/calendar",
-	// "workspaceMount": "src={source path on remote host},dst=/workspace/calendar,type=bind",
+	// "workspaceFolder": "/workspace/devenv",
+	// "workspaceMount": "src={source path on remote machine},dst=/workspace/devenv,type=bind",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
@@ -41,17 +39,22 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		// for Python
 		"ms-python.python",
 		"ms-python.vscode-pylance",
+		// for git
 		"donjayamanne.githistory",
 		"eamodio.gitlens",
-		"hediet.vscode-drawio",
-		"yzhang.markdown-all-in-one",
-		"redhat.vscode-yaml",
+		// for visual
 		"shardulm94.trailing-spaces",
 		"oderwat.indent-rainbow",
 		"coenraads.bracket-pair-colorizer-2",
+		// debugger
 		"msjsdiag.debugger-for-chrome",
+		// editer/viewer
+		"yzhang.markdown-all-in-one",
+		"redhat.vscode-yaml",
+		"hediet.vscode-drawio",
 		"joaompinto.vscode-graphviz"
 	],
 
