@@ -20,7 +20,7 @@ RUN /usr/local/bin/python -m pip install --upgrade pip \
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends fonts-vlgothic locales default-jre \
+    && apt-get -y install --no-install-recommends fonts-vlgothic locales default-jre docker.io docker-compose \
     && sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen \
     && locale-gen
 

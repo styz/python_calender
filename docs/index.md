@@ -1,4 +1,4 @@
-# Python Development Environment on **devcontainer**
+# Python Development Environment on Container with drawing tools.
 
 VSCode workspace settings and Container Image for Python.
 - Includes markdown builder/viewer and graph drawing tools.
@@ -27,7 +27,7 @@ I want to build and install pip modules, like Anaconda environment.
 ## Recommended system requirements
 - Windows10: Version 20H2
   - VSCode: VSCode v1.56.2
-    - Remote-Container extention: Extention ID is `ms-vscode-remote.remote-containers`
+    - Remote-Containers extention: Extention ID is `ms-vscode-remote.remote-containers`
 - Docker: Docker Desktop 3.3.3, Docker Engine v20.10.6
 
 ## Usage

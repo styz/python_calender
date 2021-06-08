@@ -19,6 +19,10 @@
 	// "workspaceFolder": "/workspace/devenv",
 	// "workspaceMount": "src={source path on remote machine},dst=/workspace/devenv,type=bind",
 
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
+
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash",
@@ -55,14 +59,16 @@
 		"yzhang.markdown-all-in-one",
 		"redhat.vscode-yaml",
 		"hediet.vscode-drawio",
-		"joaompinto.vscode-graphviz"
+		"joaompinto.vscode-graphviz",
+		// Docker outside of Docker
+		"ms-azuretools.vscode-docker"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "sudo chown vscode /var/run/docker.sock",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
