@@ -22,28 +22,39 @@ extra:
 extra_css:
   - css/custom.css
   - https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css
 
 extra_javascript:
-  - js/config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.js
   - https://unpkg.com/mermaid@8.10.1/dist/mermaid.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js
+  - js/config.js
 
 markdown_extensions:
   - meta
   - admonition
+  - pymdownx.details
+  - abbr
+  - attr_list
   - def_list
   - footnotes
   - toc:
       permalink: "¶"
+  - mdx_spanner
   - fontawesome_markdown
   - plantuml_markdown:
       format: svg_inline
+  - pymdownx.tasklist
   - pymdownx.smartsymbols
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.keys
+  - pymdownx.snippets:
+      base_path: docs_snippets
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       linenums: true
   - pymdownx.superfences:

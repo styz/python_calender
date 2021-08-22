@@ -60,8 +60,11 @@
 		"redhat.vscode-yaml",
 		"hediet.vscode-drawio",
 		"joaompinto.vscode-graphviz",
+		"romanpeshkov.vscode-text-tables",
+		// formatter
+		"shuworks.vscode-table-formatter",
 		// Docker outside of Docker
-		"ms-azuretools.vscode-docker"
+		"ms-azuretools.vscode-docker",
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
